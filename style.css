@@ -1,0 +1,172 @@
+/* Reset & base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    scroll-behavior: smooth;
+    font-family: Georgia, serif;
+    color: #e0e0e0;
+    background: black;
+}
+
+.screen {
+    min-height: 100vh;
+    width: 100%;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Landing */
+.landing {
+    background: url('/earth.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.title {
+    font-size: 8vw;
+    opacity: 0;
+    animation: fadeInOut 4s forwards;
+}
+
+.start-button {
+    opacity: 0;
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 1.2rem;
+    padding: 18px 33px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    animation: fadeInButton 2s 4s forwards;
+}
+
+.start-button .suqare {
+    width: 20px;
+    height: 20px;
+    border: 2.5px solid white;
+    rotate: 45deg;
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    10% {
+        opacity: 0;
+    }
+
+    20%,
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInButton {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Opening Passage */
+.passage {
+    background-color: #0d0d0d;
+}
+
+.passage-text {
+    font-size: 1.5rem;
+    max-width: 800px;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.next-button {
+    font-size: 1rem;
+    padding: 12px 28px;
+    background-color: #ffffff12;
+    color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* Chapter One */
+.chapter {
+    background: url('/background.jpg') center/cover no-repeat;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.chapter-content {
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 4rem 2rem 2rem 2rem;
+    border-radius: 1.5rem;
+}
+
+.chapter-content h3 {
+    padding: 1rem 0;
+}
+.chapter-content h4 {
+    padding-bottom: 1rem;
+}
+
+.chapter-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.chapter-actions {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.instruction {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.button {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #333;
+    border: 1px solid #aaa;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+/* Remembrance */
+.remembrance {
+    background-color: #0a0a0a;
+}
+
+.remembrance-text {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
