@@ -14,7 +14,7 @@ html {
 }
 
 .screen {
-    min-height: 100vh;
+    min-height: 100dvh;
     width: 100%;
     padding: 4rem 2rem;
     display: flex;
