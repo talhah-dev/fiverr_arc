@@ -1,7 +1,7 @@
-/* Reset & base styles */
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -17,9 +17,18 @@ html {
     min-height: 100dvh;
     width: 100%;
     padding: 4rem 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     text-align: center;
 }
@@ -35,36 +44,64 @@ html {
     font-size: 8vw;
     opacity: 0;
     color: #c7bda3;
+    -webkit-animation: fadeInOut 7s forwards;
     animation: fadeInOut 7s forwards;
 }
 
 .start-button {
-    text-decoration: none;
     opacity: 0;
-    position: relative;
+    position: absolute;
+    bottom: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    justify-content: center;
     gap: 16px;
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 14px 28px;
-    border: 1px solid #c7bda3;
-    background: none;
-    border-radius: 25px;
-    color: #c7bda3;
+    font-size: 1.2rem;
+    padding: 18px 33px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    color: #fff;
     cursor: pointer;
+    -webkit-animation: fadeInButton 2s 7s forwards;
     animation: fadeInButton 2s 7s forwards;
+    -webkit-transition: 200ms all ease-in-out;
+    -o-transition: 200ms all ease-in-out;
     transition: 200ms all ease-in-out;
+    text-decoration: none;
 }
 
 
 .start-button .suqare {
-    width: 18px;
-    height: 18px;
-    border: 2px solid #c7bda3;
+    width: 20px;
+    height: 20px;
+    border: 2.5px solid white;
     rotate: 45deg;
+}
+
+@-webkit-keyframes fadeInOut {
+
+    0%,
+    10% {
+        opacity: 0;
+    }
+
+    20%,
+    80% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
 }
 
 @keyframes fadeInOut {
@@ -86,6 +123,12 @@ html {
     100% {
         opacity: 0;
         display: none;
+    }
+}
+
+@-webkit-keyframes fadeInButton {
+    to {
+        opacity: 1;
     }
 }
 
@@ -111,6 +154,12 @@ html {
     margin-bottom: 2rem;
 }
 
+@media screen and (max-width: 500px) {
+    .passage-text {
+        font-size: 1rem;
+    }
+}
+
 .next-button {
     font-family: 'Georgia', serif;
     font-size: 1rem;
@@ -120,6 +169,8 @@ html {
     border: 1px solid #c7bda3;
     border-radius: 25px;
     cursor: pointer;
+    -webkit-transition: background 0.3s, color 0.3s;
+    -o-transition: background 0.3s, color 0.3s;
     transition: background 0.3s, color 0.3s;
 }
 
@@ -161,12 +212,14 @@ html {
     font-style: italic;
     text-align: center;
     margin-bottom: 0.5rem;
+    padding: 1rem 0;
 }
 
 .chapter-content h4 {
     font-size: 1.4rem;
     text-align: center;
     margin-bottom: 0.5rem;
+    padding-bottom: 1rem;
 }
 
 .chapter-content p {
@@ -197,6 +250,8 @@ html {
     background: none;
     border: 1px solid #c7bda3;
     border-radius: 25px;
+    -webkit-transition: background 0.3s, color 0.3s;
+    -o-transition: background 0.3s, color 0.3s;
     transition: background 0.3s, color 0.3s;
 }
 
